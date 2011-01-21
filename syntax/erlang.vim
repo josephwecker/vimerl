@@ -68,6 +68,7 @@ syn match erlangAtom            /\\\@<!'[^']*\\\@<!'/
 syn match erlangModule          /\<[a-z]\w*:\@=/ contained
 syn match erlangFunction        /\<[a-z][A-Za-z0-9_:]*\s*(\@=/ contains=erlangModule
 syn match erlangTopFunction     /^[a-z]\w*\s*(\@=/
+syn region erlangTopFunction    start=/^'/hs=s+1 skip=/\\'/ end=/'\s*(/me=s,he=s-1
 
 syn match erlangRecord          /#\w\+/
 
